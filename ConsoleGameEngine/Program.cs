@@ -1,16 +1,14 @@
-﻿using Raylib_cs;
-using static Raylib_cs.Raylib;
+﻿using ConsoleGameEngine;
 
-InitWindow(800, 480, "Hello World");
+Window.Title = "Snake";
+Window.WidthInCharacters = 60;
+Window.HeightInCharacters = 30;
 
-while (!WindowShouldClose())
+Game.Update = Update;
+
+Game.Run();
+
+static void Update()
 {
-    BeginDrawing();
-    ClearBackground(Color.WHITE);
-
     DrawText("Hello, world!", 12, 12, 20, Color.BLACK);
-
-    EndDrawing();
 }
-
-CloseWindow();
