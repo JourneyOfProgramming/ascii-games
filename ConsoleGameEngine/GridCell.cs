@@ -7,6 +7,7 @@ public class GridCell
     public required Point Position { get; init; }
     public string Type { get; set; } = CellTypes.Ground;
     public object? Entity { get; set; }
+    public ConsoleCharacter? Charater { get; set; }
 
     public override string ToString()
     {
